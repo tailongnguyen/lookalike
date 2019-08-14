@@ -1,0 +1,195 @@
+html,
+body,
+#app {
+    margin: 0;
+    padding: 0;
+
+    height: 100%;
+    width: 100%;
+
+    max-width: 100vw;
+
+    font-family: 'Quicksand', sans-serif;
+
+    overflow: hidden;
+    background-image: linear-gradient(#56CBFF, #2D8FFF);
+}
+
+.text {
+    color: white;
+    text-shadow: 3px 0px 6px rgba(0, 0, 0, 0.16);
+}
+
+::-webkit-scrollbar {
+    width: 0px;  /* Độ dài thanh cuộn = 0 */
+    background: transparent;  /* Thanh cuộn trong suốt */
+}
+
+#input_name {
+    width: 100%;
+}
+
+.ui-draggable, .ui-droppable {
+	background-position: top;
+}
+
+
+/* Grid */
+.grid-container {
+    display: grid;
+    grid-column-gap: 0px;
+    grid-template-columns: 448px 1024px 448px;
+    grid-template-rows: 252px auto 252px;
+
+    height: 100%;
+    width: 100%;
+}
+
+.grid-item {
+    font-size: 30px;
+    text-align: center;
+}
+
+.box {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+/* Components */
+#camera-name,
+#camera-screen {
+    display: grid;
+    align-items: center;
+    justify-items: center;
+}
+
+#camera-name > .text {
+    width: 100%;
+
+    background: rgba(255,255,255,.25);
+
+    border-radius: 15px;
+    border: 5px solid white;
+
+    font-size: 4.5rem;
+
+    padding: 25px 0;
+}
+
+#camera-screen > .screen {
+    width: 100%;
+
+    padding-bottom: 56.25%;
+
+    background: white;
+
+    border-radius: 25px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.25)
+}
+
+iframe {
+    border-radius: 25px;
+    border-width: 0;
+    padding: 0;
+    margin: 0
+}
+
+#camera-left-functional,
+#camera-right-functional {
+    display: flex;
+    overflow: hidden;
+}
+
+#camera-left-functional {
+    justify-content: flex-end;
+}
+
+#camera-left-functional > .left-functional,
+#camera-right-functional > .right-functional {
+    height: auto;
+    max-height: 100%;
+    width: 300px;
+
+    background: rgba(255,255,255,.25);
+
+    border-radius: 15px;
+    border: 5px solid white;
+
+    padding: 22px 25px;
+
+
+    display: grid;
+    grid-template-rows: 100px auto;
+
+    grid-row-gap: 21px;
+
+    overflow-y: auto;
+}
+
+#camera-left-functional > .left-functional {
+    margin-right: 50px;
+}
+
+#camera-right-functional > .right-functional {
+    margin-left: 50px;
+}
+
+.functional-item {
+    width: 100%;
+    padding-bottom: 100%;
+    background: white;
+    border-radius: 15px;
+
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+}
+
+.count {
+    grid-column: 1 / 3;
+
+    padding: 15px 0px;
+
+    background: rgba(255,255,255,.25);
+
+    border-radius: 15px;
+    border: 5px solid white;
+}
+
+.box-25 {
+    grid-column: 1 / 3;
+    height: 5px;
+}
+
+#camera-buttons {
+    display: flex;
+
+    justify-content: center;
+
+    padding: 50px 0px 0px 0px;
+}
+
+#camera-buttons > .middle {
+    width: 100px;
+    height: 100px;
+    
+    background: rgba(255,255,255,.25);
+
+    border-radius: 150px;
+    border: 5px solid white;
+}
+
+.capture {
+    display: grid;
+
+    grid-column-gap: 40px;
+    grid-template-columns: auto auto;
+
+    grid-row-gap: 21px;
+}
+
+.capture > img {
+    padding-bottom: 0;
+    width: 100px;
+    height: 100px;
+}
+

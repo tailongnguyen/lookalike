@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>32KB</title>
+
+    <script src='static/js/jquery-3.4.1.js'></script>
+    <script src='static/js/popper.min.js'></script>
+    <script src='static/js/bootstrap.min.js'></script>
+    <script src='static/js/Chart.min.js'></script>
+    <!-- <script src='static/js/global_vars.js'></script> -->
+    <script src='static/js/index.js'></script>
+
+    <link rel="stylesheet"  type="text/css" href='static/css/bootstrap.min.css'>
+    <link rel="stylesheet"  type="text/css" href='static/css/main.css'/>
+    
+    <link rel="icon" type="image/png" href='static/imgs/32_2.png'/>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<body> 
+        <div id="logo">
+            <img alt='logo' src='static/imgs/LAK.png' style="height: 300px;">
+        </div>
+
+        <div id='input'>
+            <div class="input-group">
+                <div class="input-group-prepend">
+                <span class="input-group-text">Phone numbers</span>
+                </div>
+                <textarea class="form-control" aria-label="With textarea"></textarea>
+            </div>
+            <div class="d-flex justify-content-center flex-column" id='input-btns'>
+                <div class="file btn btn-secondary" style='position: relative; overflow: hidden; background-color: rgb(255, 159, 64); border: none;'>
+                    Upload
+                    <input type="file" name="file" style="position: absolute; font-size: 50px; opacity: 0; right: 0; top: 0;"/>
+                </div>
+                <button type="button" class="btn btn-primary" onclick="showResult()" style="background-color: rgb(54, 162, 235); border: none;">Submit</button>
+
+            </div>
+        </div>
+
+        <div id="result">
+            <table class="table table-fixed">
+                <thead>
+                    <tr>
+                    <th class="col-xs-3">Facebook ID</th>
+                    <th class="col-xs-3">User Name</th>
+                    <th class="col-xs-6">Phone</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                    <td class="col-xs-3">981723491359</td>
+                    <td class="col-xs-3">Mark Zuckerberg</td>
+                    <td class="col-xs-6">0123456789</td>
+                    </tr>
+            
+                    <tr>
+                    <td class="col-xs-3">981723491359</td>
+                    <td class="col-xs-3">Mark Zuckerberg</td>
+                    <td class="col-xs-6">0123456789</td>
+                    </tr>
+                    <tr>
+                    <td class="col-xs-3">981723491359</td>
+                    <td class="col-xs-3">Mark Zuckerberg</td>
+                    <td class="col-xs-6">0123456789</td>
+                    </tr>
+                    <tr>
+                    <td class="col-xs-3">981723491359</td>
+                    <td class="col-xs-3">Mark Zuckerberg</td>
+                    <td class="col-xs-6">0123456789</td>
+                    </tr>
+                    <tr>
+                    <td class="col-xs-3">981723491359</td>
+                    <td class="col-xs-3">Mark Zuckerberg</td>
+                    <td class="col-xs-6">0123456789</td>
+                    </tr>
+                    <tr>
+                    <td class="col-xs-3">981723491359</td>
+                    <td class="col-xs-3">Mark Zuckerberg</td>
+                    <td class="col-xs-6">0123456789</td>
+                    </tr>
+                    <tr>
+                    <td class="col-xs-3">981723491359</td>
+                    <td class="col-xs-3">Mark Zuckerberg</td>
+                    <td class="col-xs-6">0123456789</td>
+                    </tr>
+                    <tr>
+                    <td class="col-xs-3">981723491359</td>
+                    <td class="col-xs-3">Mark Zuckerberg</td>
+                    <td class="col-xs-6">0123456789</td>
+                    </tr>
+                    <tr>
+                    <td class="col-xs-3">981723491359</td>
+                    <td class="col-xs-3">Mark Zuckerberg</td>
+                    <td class="col-xs-6">0123456789</td>
+                    </tr>
+                    <tr>
+                    <td class="col-xs-3">981723491359</td>
+                    <td class="col-xs-3">Mark Zuckerberg</td>
+                    <td class="col-xs-6">0123456789</td>
+                    </tr>
+                    <tr>
+                    <td class="col-xs-3">981723491359</td>
+                    <td class="col-xs-3">Mark Zuckerberg</td>
+                    <td class="col-xs-6">0123456789</td>
+                    </tr>
+                    <tr>
+                    <td class="col-xs-3">981723491359</td>
+                    <td class="col-xs-3">Mark Zuckerberg</td>
+                    <td class="col-xs-6">0123456789</td>
+                    </tr>
+                    <tr>
+                    <td class="col-xs-3">981723491359</td>
+                    <td class="col-xs-3">Mark Zuckerberg</td>
+                    <td class="col-xs-6">0123456789</td>
+                    </tr>
+                    <tr>
+                    <td class="col-xs-3">981723491359</td>
+                    <td class="col-xs-3">Mark Zuckerberg</td>
+                    <td class="col-xs-6">0123456789</td>
+                    </tr>
+                    <tr>
+                    <td class="col-xs-3">981723491359</td>
+                    <td class="col-xs-3">Mark Zuckerberg</td>
+                    <td class="col-xs-6">0123456789</td>
+                    </tr>
+                    <tr>
+                    <td class="col-xs-3">981723491359</td>
+                    <td class="col-xs-3">Mark Zuckerberg</td>
+                    <td class="col-xs-6">0123456789</td>
+                    </tr>
+                    <tr>
+                    <td class="col-xs-3">981723491359</td>
+                    <td class="col-xs-3">Mark Zuckerberg</td>
+                    <td class="col-xs-6">0123456789</td>
+                    </tr>
+                    <tr>
+                    <td class="col-xs-3">981723491359</td>
+                    <td class="col-xs-3">Mark Zuckerberg</td>
+                    <td class="col-xs-6">0123456789</td>
+                    </tr>
+                    <tr>
+                    <td class="col-xs-3">981723491359</td>
+                    <td class="col-xs-3">Mark Zuckerberg</td>
+                    <td class="col-xs-6">0123456789</td>
+                    </tr>
+                    <tr>
+                    <td class="col-xs-3">981723491359</td>
+                    <td class="col-xs-3">Mark Zuckerberg</td>
+                    <td class="col-xs-6">0123456789</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div id="user-info">
+            <div class="container">
+                <div class="row shadow p-3 mb-5 bg-white rounded" id='profile'>
+                    <div class="col-4 d-flex flex-column justify-content-center align-self-center">
+                        <div style="text-align: center">
+                            <img id="profile-picture" class="rounded-circle" src="static/imgs/icons8-user-male-64.png"> 
+                            <br>
+                            <p id='username'>Nguyễn Tài Long</p>
+                        </div>
+                        <div class="d-flex justify-content-between">
+                            <button type="button" class="btn btn-info" style="cursor: default; background-color: rgb(75, 192, 192); border: none">
+                                Friends <span class="badge badge-light">1611</span>
+                            </button>
+                            <button type="button" class="btn btn-success" style="cursor: default; background-color: rgb(255, 159, 64); border: none">
+                                Followers <span class="badge badge-light">1997</span>
+                            </button>
+
+                        </div>
+                    </div>
+                    <div class="col-8">
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item"><span class="profile-title">Năm sinh</span><span class="profile-desc">1997</span></li>
+                            <li class="list-group-item"><span class="profile-title">Quê quán</span><span class="profile-desc">Hanoi, Vietnam</span></li>
+                            <li class="list-group-item"><span class="profile-title">Nơi ở hiện tại</span><span class="profile-desc">Hanoi, Vietnam</span></li>
+                            <li class="list-group-item"><span class="profile-title">Email</span><span class="profile-desc">long@infore.vn</span></li>
+                            <li class="list-group-item"><span class="profile-title">Số điện thoại</span><span class="profile-desc">+84352794397</span></li>
+                            <li class="list-group-item"><span class="profile-title">Học trường</span>
+                                <span class="profile-desc" id="userSchool">
+                                    
+                                    <div style="text-align: left">
+                                        <i class="fa fa-graduation-cap"></i>
+                                        <a href="https://www.facebook.com/%2087719017871">
+                                            <span style="padding-left: 10px;">HNUE High School for Gifted Students</span>
+
+                                        </a>
+
+                                    </div>
+                                    
+                                </span>
+                            </li>
+                            <li class="list-group-item"><span class="profile-title">Làm việc tại</span>
+                                    <span class="profile-desc" id="userWork">
+                                        
+                                        <div style="text-align: left">
+                                            <i class="fa fa-briefcase"></i>
+                                            
+                                            <a href="https://www.facebook.com/%2085981843511">
+                                                <span style="padding-left: 10px;">FYT   </span>
+
+                                            </a>
+                                        </div>
+                                        
+                                        <div style="text-align: left">
+                                            <i class="fa fa-briefcase"></i>
+                                            
+                                            <a href="https://www.facebook.com/%20133753590026031">
+                                                <span style="padding-left: 10px;">Striker (CF)</span>
+
+                                            </a>
+
+                                            at 
+                                        
+                                            <a href="https://www.facebook.com/%20601838579833979">
+                                                <span style="padding-left: 10px;">FC Công Lý - K46 CSP   </span>
+
+                                            </a>
+                                        </div>
+                                        
+                                        <div style="text-align: left">
+                                            <i class="fa fa-briefcase"></i>
+                                            
+                                            <a href="https://www.facebook.com/%20172250686142766">
+                                                <span style="padding-left: 10px;">Khối THPT Chuyên Đại học Sư Phạm Hà Nội .   </span>
+
+                                            </a>
+                                        </div>
+                                        
+                                    </span>
+                                </li>
+                        </ul>
+                            
+                    </div>
+                </div>
+                <div class="row" id="closed-friends">
+                    <h3 style="width: 100%; text-align: center">Top bạn bè thân thiết</h3>
+                    
+                    <div class="slide" style="width: 100%; padding-top: 2%;">
+                        <div id="kycSlide" class="carousel slide pointer-event" data-ride="carousel">
+                            <div class="carousel-inner">
+
+                                <div class="carousel-item active">
+                                    <div class="col-md-4 float-left">    
+                                        <div class="card " style="align-items: center;">        
+                                            <img class="card-img-top card-img" src="./Phone Info_files/picture(1)" alt="Card image cap">    
+                                            <div class="card-body card-user">                
+                                                <h5>Lê Công Thành</h5>
+                                            </div>           
+                                            <div class="card-score" style="padding-top:0.75rem">                
+                                                <span>Số điểm tương đồng : <strong>6</strong></span>            
+                                            </div>           
+                                            <div style="padding-bottom:0.75rem">              
+                                                <span>Số lần tag nhau : <strong>14</strong></span>            
+                                            </div>   
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-4 float-left">    
+                                        <div class="card " style="align-items: center;">        
+                                            <img class="card-img-top card-img" src="./Phone Info_files/picture(1)" alt="Card image cap">    
+                                            <div class="card-body card-user">                
+                                                <h5>Lê Công Thành</h5>
+                                            </div>           
+                                            <div class="card-score" style="padding-top:0.75rem">                
+                                                <span>Số điểm tương đồng : <strong>6</strong></span>            
+                                            </div>           
+                                            <div style="padding-bottom:0.75rem">              
+                                                <span>Số lần tag nhau : <strong>14</strong></span>            
+                                            </div>   
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-4 float-left">    
+                                        <div class="card " style="align-items: center;">        
+                                            <img class="card-img-top card-img" src="./Phone Info_files/picture(1)" alt="Card image cap">    
+                                            <div class="card-body card-user">                
+                                                <h5>Lê Công Thành</h5>
+                                            </div>           
+                                            <div class="card-score" style="padding-top:0.75rem">                
+                                                <span>Số điểm tương đồng : <strong>6</strong></span>            
+                                            </div>           
+                                            <div style="padding-bottom:0.75rem">              
+                                                <span>Số lần tag nhau : <strong>14</strong></span>            
+                                            </div>   
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                
+                            </div>
+                        </div>
+
+                    </div>
+                    <a class="carousel-control-prev" href="https://smcc.vn/Administrator/PhoneInfo.aspx?phone=100005303167355#kycSlide" style="width: 8%;" data-role="none" data-slide="prev">
+                        <span class="icon-card" aria-hidden="true"><i class="icon-prev"></i></span>
+                        <span class="sr-only">Geri</span>
+                    </a>
+                    <a class="carousel-control-next" href="https://smcc.vn/Administrator/PhoneInfo.aspx?phone=100005303167355#kycSlide" style="width: 8%;" data-role="none" data-slide="next">
+                        <span class="icon-card" aria-hidden="true"><i class="icon-next"></i></span>
+                        <span class="sr-only">İleri</span>
+                    </a>
+                
+                </div>
+                <div class="row" id="demographics">                
+                    <div class="chart-container col-6" style="position: relative; height:40vh; width:40vw;">
+                        <canvas id="myChart-1"></canvas>
+                    </div>
+
+                    <div class="chart-container col-6" style="position: relative; height:40vh; width:40vw;">
+                        <canvas id="myChart-2"></canvas>
+                    </div>
+                </div>
+                <div class="row" id="posts-pages">
+                    
+                </div>
+
+            </div>
+        </div>
+<script>
+    window.chartColors = {
+        red: 'rgb(255, 99, 132)',
+        orange: 'rgb(255, 159, 64)',
+        yellow: 'rgb(255, 205, 86)',
+        green: 'rgb(75, 192, 192)',
+        blue: 'rgb(54, 162, 235)',
+        purple: 'rgb(153, 102, 255)',
+        grey: 'rgb(201, 203, 207)'
+    };
+
+    data_1 = {
+        datasets: [{
+            data: [10, 20, 30],
+            
+					backgroundColor: [
+						window.chartColors.red,
+						window.chartColors.orange,
+						window.chartColors.yellow
+					]
+        }],
+
+        // These labels appear in the legend and in the tooltips when hovering different arcs
+        labels: [
+            'Red',
+            'Orange',
+            'Yellow'
+        ]
+    };
+    
+    data_2 = {
+        datasets: [{
+            data: [10, 20, 30, 60],
+            
+					backgroundColor: [
+						window.chartColors.green,
+						window.chartColors.purple,
+						window.chartColors.red,
+						window.chartColors.blue						
+					]
+        }],
+
+        // These labels appear in the legend and in the tooltips when hovering different arcs
+        labels: [
+            'Green',
+            'Purple',
+            'Red',
+            'Blue'
+        ]
+    };
+    
+
+    var ctx = $('#myChart-1');
+    var myPieChart_1 = new Chart(ctx, {
+        type: 'pie',
+        data: data_1,
+        options: {
+            responsive:true
+        }
+    });
+
+    var ctx = $('#myChart-2');
+    var myPieChart_2 = new Chart(ctx, {
+        type: 'pie',
+        data: data_2,
+        options: {
+            responsive:true
+        }
+    });
+
+</script>
+</body>
+</html>

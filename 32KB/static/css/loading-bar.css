@@ -1,0 +1,71 @@
+/* Loading Bar */
+
+#loading-bar > .title {
+    display: block;
+}
+
+#loading-bar > .title > .text {
+    display: block;
+
+    font-size: 72px;
+    line-height: 1.5em;
+    text-align: center;
+}
+
+.progress-bar {
+    background-color: lightgray;
+    border-radius: 100px;
+    width: 100%;
+    height: 75px;
+    display: block;
+}
+
+.progress-value {
+    color: #fff;
+    text-align: center;
+    background-color: rgb(32, 182, 67);
+    transition: .3s all linear;
+    border-radius: 100px;
+    height: 75px;
+    display: block;
+    animation: progress 1s ease-in-out forwards;
+    -webkit-animation: progress 1s ease-in-out forwards;
+}
+
+.progress-bar-camera {
+    background-color: lightgray;
+    border-radius: 100px;
+    width: 100%;
+    height: 75px;
+    display: block;
+}
+
+.progress-value-camera {
+    color: #fff;
+    text-align: center;
+    background-color: rgb(32, 182, 67);
+    transition: .3s all linear;
+    border-radius: 100px;
+    height: 75px;
+    display: block;
+    animation: progress 15s ease-in-out forwards;
+    -webkit-animation: progress 15s ease-in-out forwards;
+}
+
+@keyframes progress {
+    from {
+        width: 10%;
+    }
+    
+    to {
+        width: 100%;
+    }
+}
+@-webkit-keyframes progress {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
