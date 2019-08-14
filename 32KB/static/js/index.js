@@ -1,44 +1,3 @@
-// int size_get = list_id.Count * 2;
-// Dictionary<string, int> list_weight_friend = new Dictionary<string, int>();
-// string urlData = String.Empty;
-// WebClient wc = new WebClient(); 
-// foreach (string id in list_id)
-// {
-//     urlData = wc.DownloadString("http://192.168.1.228:8889/default.aspx?id=" + id).Trim();
-//     List<string> listFriend = urlData.Split(' ').ToList();
-//     foreach (string fr in listFriend)
-//     {
-//         //neu da co trong dictionary
-//         if (list_weight_friend.ContainsKey(fr))
-//         {
-//             int temp_w = list_weight_friend[fr];
-//             list_weight_friend[fr] = temp_w + 1;
-//         }
-//         //neu chua co trong dictionary
-//         else
-//         {
-//             list_weight_friend[fr] = 1;
-//         }
-//     }
-// }
-// var list_weight_friend_sorted = list_weight_friend.OrderBy(key => key.Value);
-// var size_of_list_friend = list_weight_friend_sorted.Count();
-// var results = new Dictionary<string, int>();
-// var count = 0;
-// for (int i = size_of_list_friend - 1; i >= 0; i--)
-// {
-//     count++;
-//     if (count > size_get) break;
-//     results[list_weight_friend_sorted.ElementAt(i).Key] = list_weight_friend_sorted.ElementAt(i).Value;
-// }
-
-// List<string> rs = new List<string>();
-// foreach (KeyValuePair<string, int> entry in results)
-// {
-//     rs.Add(entry.Key);
-// }
-// return rs;
-
 function initLayout(){
   var screenHeight = $("body").height();
   var screenWidth = $("body").width();
@@ -81,13 +40,105 @@ function showResult(){
   $("#result").delay(500).fadeIn(500);
 }
 
+function fetchUserInfo(userID){
+  $.ajax({
+    type: "GET",
+    url: "http://192.168.1.228:8888/api.aspx?t=profile&q=" + userID,
+    complete: function (data){
+    
+      console.log("data", data);
+      var a = data['responseText'];      
+      var userData = $.parseJSON(a.slice(8, a.length - 1));
+      userData = userData['hits']['hits'][0]['_source'];
+      console.log(userData);
+      
+      const userName = userData['fb_data']['name'];
+      const userAvatar =  userData['author_avatar_url'];
+      const numFriends = userData['friend_count'];
+      const numFollowers = userData['follower_count'];
+      const birthYear = userData['birthYear'];
+      const city = userData['current_city'];
+      const hometown = userData['hometown'];
+      const email = userData['email'];
+
+      var phoneNumber = "";
+      if (userData['phone_mobile'] == "0") {
+        phoneNumber = userData['fb_data']['mobile_phone'];
+      } else {
+        phoneNumber = userData['phone_mobile'];
+        
+      }
+
+      const education = userData['fb_data']['education'];
+      const work = userData['fb_data']['work'];
+
+      $("#username").text(userName);
+      $("#friend-cnt").text(numFriends + " friends");
+      $("#follower-cnt").text(numFollowers + " followers");
+      $("#profile-picture").attr('src', userAvatar);
+      $("#birth-year").text(birthYear);
+      $("#hometown").text(hometown);
+      $("#citu").text(city);
+      $("#email").text(email);
+      $("#phone-number").text(phoneNumber);
+
+      education.forEach(element => {
+        $("#education").append($(`
+          <div style="text-align: left">
+              <i class="fa fa-graduation-cap"></i>
+              <a href="https://www.facebook.com/%` + element['school']['id'] + `">
+                  <span style="padding-left: 10px;">` + element['school']['name'] + `</span>
+
+              </a>
+
+          </div>
+        `))
+        
+      });
+
+      work.forEach(element => {
+        $("#work").append($(`
+        <div style="text-align: left">
+            <i class="fa fa-briefcase"></i>
+            
+            <a href="https://www.facebook.com/%` + element['employer']['id'] + `">
+                <span style="padding-left: 10px;">` +  element['employer']['name'] + `</span>
+            </a>
+        </div>
+        `))
+      });
+
+      $("#user-info").delay(900).fadeIn(500);
+    }
+  });
+}
+
+function submit() {
+  $.ajax({
+    type: "POST",
+    xhrFields: {
+      withCredentials: true
+    },
+    url: "http://192.168.30.10:1111/Api.aspx?t=getphone",
+    dataType: 'text/json', 
+    data: "560381171 100003009723895",
+    complete: function(data){
+      console.log(data);
+      
+    }
+  })
+}
+
 $(document).ready(function(){
   console.log( "ready!" );
   initLayout();
   $("td").click(function(){
     $("#logo").addClass("horizTranslate");
     $("#result").addClass("horizTranslate");
-    $("#user-info").delay(500).fadeIn(500);
+    var user_id = $(this).parent().find(".col-xs-6").text();
+    console.log("user_id: ", user_id);
+    
+    fetchUserInfo(user_id);
   });
   
 })
