@@ -25,13 +25,13 @@
         <div id="logo">
             <img alt='logo' src='static/imgs/LAK.png' style="height: 300px;">
         </div>
-
-        <div id='input'>
+        
+        <form id='input' action="http://192.168.1.228:8887/Api.aspx?t=lookalike">
             <div class="input-group">
                 <div class="input-group-prepend">
                 <span class="input-group-text">Phone numbers</span>
                 </div>
-                <textarea class="form-control" aria-label="With textarea"></textarea>
+                <textarea name="Key" id="phone" class="form-control" aria-label="With textarea"></textarea>
             </div>
             <div class="d-flex justify-content-center flex-column" id='input-btns'>
                 <div class="file btn btn-secondary" style='position: relative; overflow: hidden; background-color: rgb(255, 159, 64); border: none; '>
@@ -41,6 +41,10 @@
                 <button type="button" class="btn btn-primary" onclick="showResult()" style="background-color: rgb(54, 162, 235); border: none;">Submit</button>
 
             </div>
+        </form>
+        
+        <div id='loading-gif' style="display: none">
+            <div class="lds-grid"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
         </div>
 
         <div id="result">
@@ -53,7 +57,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
+                    <!-- <tr>
                     <td class="col-xs-3">981723491359</td>
                     <td class="col-xs-3">Mark Zuckerberg</td>
                     <td class="col-xs-6">100005303167355</td>
@@ -153,7 +157,7 @@
                     <td class="col-xs-3">981723491359</td>
                     <td class="col-xs-3">Mark Zuckerberg</td>
                     <td class="col-xs-6">100005303167355</td>
-                    </tr>
+                    </tr> -->
                 </tbody>
             </table>
         </div>
@@ -165,7 +169,7 @@
                         <div style="text-align: center">
                             <img id="profile-picture" class="rounded-circle" src="static/imgs/icons8-user-male-64.png"> 
                             <br>
-                            <p id='username'>Nguyễn Tài Long</p>
+                            <h4 id='username'>Nguyễn Tài Long</h4>
                         </div>
                         <div class="d-flex justify-content-between">
                             <button type="button" id="friend-cnt" class="btn btn-info" style="width: 100px; cursor: default; background-color: rgb(75, 192, 192); border: none">
@@ -235,13 +239,13 @@
                     </div>
                 </div>
                 <div class="row" id="closed-friends">
-                    <h3 style="width: 100%; text-align: center">Top bạn bè thân thiết</h3>
+                    <h3 style="width: 100%; text-align: center">Top bạn bè</h3>
                     
                     <div class="slide" style="width: 100%; padding-top: 2%;">
                         <div id="kycSlide" class="carousel slide pointer-event" data-ride="carousel">
                             <div class="carousel-inner">
 
-                                <div class="carousel-item active">
+                                <!-- <div class="carousel-item active">
                                     <div class="col-md-4 float-left">    
                                         <div class="card " style="align-items: center;">        
                                             <img class="card-img-top card-img" src="./Phone Info_files/picture(1)" alt="Card image cap">    
@@ -287,24 +291,24 @@
                                         </div>
                                     </div>
 
-                                </div>
+                                </div> -->
 
                                 
                             </div>
                         </div>
 
                     </div>
-                    <a class="carousel-control-prev" href="https://smcc.vn/Administrator/PhoneInfo.aspx?phone=100005303167355#kycSlide" style="width: 8%;" data-role="none" data-slide="prev">
+                    <a class="carousel-control-prev" href="#kycSlide" style="width: 8%;" data-role="none" data-slide="prev">
                         <span class="icon-card" aria-hidden="true"><i class="icon-prev"></i></span>
                         <span class="sr-only">Geri</span>
                     </a>
-                    <a class="carousel-control-next" href="https://smcc.vn/Administrator/PhoneInfo.aspx?phone=100005303167355#kycSlide" style="width: 8%;" data-role="none" data-slide="next">
+                    <a class="carousel-control-next" href="#kycSlide" style="width: 8%;" data-role="none" data-slide="next">
                         <span class="icon-card" aria-hidden="true"><i class="icon-next"></i></span>
                         <span class="sr-only">İleri</span>
                     </a>
                 
                 </div>
-                <div class="row" id="demographics">                
+                <!-- <div class="row" id="demographics">                
                     <div class="chart-container col-6" style="position: relative; height:40vh; width:40vw;">
                         <canvas id="myChart-1"></canvas>
                     </div>
@@ -315,7 +319,7 @@
                 </div>
                 <div class="row" id="posts-pages">
                     
-                </div>
+                </div> -->
 
             </div>
         </div>
@@ -371,23 +375,23 @@
     };
     
 
-    var ctx = $('#myChart-1');
-    var myPieChart_1 = new Chart(ctx, {
-        type: 'pie',
-        data: data_1,
-        options: {
-            responsive:true
-        }
-    });
+    // var ctx = $('#myChart-1');
+    // var myPieChart_1 = new Chart(ctx, {
+    //     type: 'pie',
+    //     data: data_1,
+    //     options: {
+    //         responsive:true
+    //     }
+    // });
 
-    var ctx = $('#myChart-2');
-    var myPieChart_2 = new Chart(ctx, {
-        type: 'pie',
-        data: data_2,
-        options: {
-            responsive:true
-        }
-    });
+    // var ctx = $('#myChart-2');
+    // var myPieChart_2 = new Chart(ctx, {
+    //     type: 'pie',
+    //     data: data_2,
+    //     options: {
+    //         responsive:true
+    //     }
+    // });
 
 </script>
 </body>
