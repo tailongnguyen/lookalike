@@ -23,7 +23,7 @@
 </head>
 <body> 
         <div id="logo">
-            <img alt='logo' src='static/imgs/LAK.png' style="height: 300px;">
+            <img alt='logo' onclick="reload()" src='static/imgs/LAK.png' style="height: 300px; cursor: pointer;">
         </div>
         
         <form id='input' action="http://192.168.1.228:8887/Api.aspx?t=lookalike">
@@ -169,7 +169,7 @@
                         <div style="text-align: center">
                             <img id="profile-picture" class="rounded-circle" src="static/imgs/icons8-user-male-64.png"> 
                             <br>
-                            <h4 id='username'>Nguyễn Tài Long</h4>
+                            <a id='username'  target="_blank" href="#" style="font-size: 25px; text-decoration: none !important;">Nguyễn Tài Long</a>
                         </div>
                         <div class="d-flex justify-content-between">
                             <button type="button" id="friend-cnt" class="btn btn-info" style="width: 100px; cursor: default; background-color: rgb(75, 192, 192); border: none">

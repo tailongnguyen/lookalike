@@ -41,6 +41,10 @@ function initLayout(){
   })
 }
 
+function reload() {
+  window.location.reload()
+}
+
 function showResult(){
   $("#logo").addClass('slide-top');
   $("#input").fadeOut(500);
@@ -89,8 +93,8 @@ function fetchUserInfo(userID){
     
       console.log("data", data);
       var a = data['responseText'];      
-      var userData = $.parseJSON(a);
-      userData = userData['hits']['hits'][0]['_source'];
+      var rawUserData = $.parseJSON(a);
+      userData = rawUserData['hits']['hits'][0]['_source'];
       console.log(userData);
       
       const userName = userData['fb_data']['name'];
@@ -114,6 +118,8 @@ function fetchUserInfo(userID){
       const work = userData['fb_data']['work'] != null ? userData['fb_data']['work'] : [];
 
       $("#username").text(userName);
+      $("#username").attr("href", "https://www.facebook.com/" + rawUserData['hits']['hits'][0]['_id'] + "/about");
+
       $("#friend-cnt").text(numFriends + " friends");
       $("#follower-cnt").text(numFollowers + " followers");
       $("#profile-picture").attr('src', userAvatar);
